@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Support Requests | SMHOS</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/peer.css">
+</head>
+
+<body>
+
+<div class="peer-app">
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <header class="peer-topbar">
+
+        <div class="peer-brand">
+
+            <img
+                src="../assets/logo.png"
+                alt="SMHOS Logo"
+                class="peer-logo"
+            >
+
+            <div>
+                <h1>SMHOS</h1>
+                <span>PEER LISTENER</span>
+            </div>
+
+        </div>
+
+
+        <div class="peer-user-area">
+
+            <div class="peer-status">
+
+                <span
+                    class="status-dot"
+                    id="statusDot">
+                </span>
+
+                <span id="availabilityText">
+                    Offline
+                </span>
+
+            </div>
+
+
+            <button
+                class="peer-logout-btn"
+                id="logoutButton">
+
+                Logout
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="peer-main">
+
+
+        <!-- PAGE HEADER -->
+
+        <section class="peer-welcome">
+
+            <p class="peer-eyebrow">
+                PEER SUPPORT
+            </p>
+
+            <h2>
+                Support Requests
+            </h2>
+
+            <p>
+                Review available student support requests
+                and respond when you're ready.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             NOTICE
+        ========================== -->
+
+        <section class="peer-availability-card">
+
+            <div class="availability-content">
+
+                <div>
+
+                    <p class="card-label">
+                        YOUR STATUS
+                    </p>
+
+                    <h3 id="requestStatusHeading">
+                        You're offline
+                    </h3>
+
+                    <p id="requestStatusDescription">
+                        Go online from your dashboard to receive
+                        eligible support requests.
+                    </p>
+
+                </div>
+
+                <a
+                    href="dashboard.html"
+                    class="availability-toggle">
+
+                    Dashboard
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             REQUEST COUNT
+        ========================== -->
+
+        <section class="peer-stats-grid">
+
+            <div class="peer-stat-card">
+
+                <div class="stat-icon">
+                    💬
+                </div>
+
+                <div>
+
+                    <span>
+                        Available Requests
+                    </span>
+
+                    <strong id="requestCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             REQUEST LIST
+        ========================== -->
+
+        <section class="peer-section">
+
+            <div class="peer-section-heading">
+
+                <div>
+
+                    <p class="peer-eyebrow">
+                        INCOMING
+                    </p>
+
+                    <h2>
+                        Available for You
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="peer-request-preview"
+                id="requestsContainer">
+
+                <!-- Requests will be inserted here -->
+
+                <div class="empty-request-state">
+
+                    <div class="empty-request-icon">
+                        💬
+                    </div>
+
+                    <h3>
+                        No requests available
+                    </h3>
+
+                    <p>
+                        When an eligible student sends a support
+                        request, it will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             GUIDELINE
+        ========================== -->
+
+        <section class="peer-guidelines">
+
+            <div class="guideline-icon">
+                ♥
+            </div>
+
+            <div>
+
+                <h3>
+                    Listen within your role
+                </h3>
+
+                <p>
+                    Peer listeners provide support and a listening
+                    ear. Do not diagnose, prescribe treatment, or
+                    attempt to replace professional counselling.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         BOTTOM NAVIGATION
+    ========================== -->
+
+    <nav class="peer-bottom-nav">
+
+        <a
+            href="dashboard.html"
+            class="peer-bottom-item">
+
+            <span class="peer-bottom-icon">
+                ⌂
+            </span>
+
+            <span>
+                Home
+            </span>
+
+        </a>
+
+
+        <a
+            href="requests.html"
+            class="peer-bottom-item active">
+
+            <span class="peer-bottom-icon">
+                💬
+            </span>
+
+            <span>
+                Requests
+            </span>
+
+        </a>
+
+
+        <a
+            href="sessions.html"
+            class="peer-bottom-item">
+
+            <span class="peer-bottom-icon">
+                ▣
+            </span>
+
+            <span>
+                Sessions
+            </span>
+
+        </a>
+
+    </nav>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<script
+    type="module"
+    src="../js/peer.js">
+</script>
+
+</body>
+</html>
