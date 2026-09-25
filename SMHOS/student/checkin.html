@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Daily Check-In | SMHOS</title>
+
+
+    <!-- General SMHOS styles -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+
+    <!-- Student styles -->
+    <link
+        rel="stylesheet"
+        href="../css/student.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="student-app">
+
+
+        <!-- =========================================
+             TOP BAR
+        ========================================== -->
+
+        <header class="student-topbar">
+
+            <a
+                href="dashboard.html"
+                class="smhos-brand"
+            >
+
+                <div class="smhos-logo">
+                    S
+                </div>
+
+
+                <div class="smhos-brand-text">
+
+                    <strong>
+                        SMHOS
+                    </strong>
+
+                    <span>
+                        STUDENT • DAILY CHECK-IN
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <div class="topbar-right">
+
+                <span class="anonymous-status">
+
+                    <span class="status-dot"></span>
+
+                    Anonymous
+
+                </span>
+
+
+                <button
+                    id="logoutButton"
+                    class="logout-mini"
+                    type="button"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =========================================
+             MAIN CONTENT
+        ========================================== -->
+
+        <main class="student-main">
+
+
+            <!-- PAGE INTRO -->
+
+            <section class="greeting-section">
+
+                <h1>
+                    How are you feeling today?
+                </h1>
+
+                <p>
+                    Take a moment to check in with yourself.
+                </p>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 MOOD SCORE
+            ====================================== -->
+
+            <section class="checkin-card">
+
+                <div class="checkin-question">
+
+                    <h2>
+                        Rate your mood
+                    </h2>
+
+                    <p>
+                        1 means very low and 10 means excellent.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="mood-scale"
+                    id="moodScale"
+                >
+
+                    <button
+                        type="button"
+                        class="mood-number"
+                        data-mood="1"
+                    >
+                        1
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-number"
+                        data-mood="2"
+                    >
+                        2
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-number"
+                        data-mood="3"
+                    >
+                        3
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-number"
+                        data-mood="4"
+                    >
+                        4
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-number"
+                        data-mood="5"
+                    >
+                        5
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-number"
+                        data-mood="6"
+                    >
+                        6
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-number"
+                        data-mood="7"
+                    >
+                        7
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-number"
+                        data-mood="8"
+                    >
+                        8
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-number"
+                        data-mood="9"
+                    >
+                        9
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-number"
+                        data-mood="10"
+                    >
+                        10
+                    </button>
+
+                </div>
+
+
+                <p
+                    class="selected-mood-text"
+                    id="selectedMoodText"
+                >
+                    Select a number above.
+                </p>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 MOOD TAGS
+            ====================================== -->
+
+            <section class="checkin-card">
+
+                <div class="checkin-question">
+
+                    <h2>
+                        What's influencing your mood?
+                    </h2>
+
+                    <p>
+                        Select everything that feels relevant.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="mood-tags"
+                    id="moodTags"
+                >
+
+                    <button
+                        type="button"
+                        class="mood-tag"
+                        data-tag="Happy"
+                    >
+                        Happy
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-tag"
+                        data-tag="Calm"
+                    >
+                        Calm
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-tag"
+                        data-tag="Stressed"
+                    >
+                        Stressed
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-tag"
+                        data-tag="Anxious"
+                    >
+                        Anxious
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-tag"
+                        data-tag="Sad"
+                    >
+                        Sad
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-tag"
+                        data-tag="Angry"
+                    >
+                        Angry
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-tag"
+                        data-tag="Tired"
+                    >
+                        Tired
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-tag"
+                        data-tag="Lonely"
+                    >
+                        Lonely
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-tag"
+                        data-tag="Overwhelmed"
+                    >
+                        Overwhelmed
+                    </button>
+
+                    <button
+                        type="button"
+                        class="mood-tag"
+                        data-tag="Motivated"
+                    >
+                        Motivated
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 OPTIONAL NOTE
+            ====================================== -->
+
+            <section class="checkin-card">
+
+                <div class="checkin-question">
+
+                    <h2>
+                        Anything you'd like to share?
+                    </h2>
+
+                    <p>
+                        This is optional. You can leave it blank.
+                    </p>
+
+                </div>
+
+
+                <textarea
+                    id="moodNote"
+                    class="mood-note"
+                    placeholder="Write something about how you're feeling..."
+                    maxlength="1000"
+                ></textarea>
+
+
+                <div class="character-count">
+
+                    <span id="characterCount">
+                        0
+                    </span>
+
+                    / 1000
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================
+                 SUBMIT
+            ====================================== -->
+
+            <section class="checkin-submit-section">
+
+                <button
+                    type="button"
+                    id="submitCheckinButton"
+                    class="submit-checkin-button"
+                >
+                    Save Today's Check-In
+                </button>
+
+
+                <p
+                    id="checkinMessage"
+                    class="checkin-message"
+                ></p>
+
+            </section>
+
+
+
+            <!-- BACK -->
+
+            <a
+                href="dashboard.html"
+                class="back-dashboard-link"
+            >
+                ← Back to dashboard
+            </a>
+
+
+        </main>
+
+
+
+        <!-- =========================================
+             BOTTOM NAVIGATION
+        ========================================== -->
+
+        <nav class="student-bottom-nav">
+
+            <a
+                href="dashboard.html"
+                class="bottom-nav-item"
+            >
+
+                <span class="bottom-nav-icon">
+                    ⌂
+                </span>
+
+                Home
+
+            </a>
+
+
+            <a
+                href="checkin.html"
+                class="bottom-nav-item active"
+            >
+
+                <span class="bottom-nav-icon">
+                    ✓
+                </span>
+
+                Check-in
+
+            </a>
+
+
+            <a
+                href="self-help.html"
+                class="bottom-nav-item"
+            >
+
+                <span class="bottom-nav-icon">
+                    ♡
+                </span>
+
+                Library
+
+            </a>
+
+
+            <a
+                href="sessions.html"
+                class="bottom-nav-item"
+            >
+
+                <span class="bottom-nav-icon">
+                    ◷
+                </span>
+
+                Sessions
+
+            </a>
+
+        </nav>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         CHECK-IN JAVASCRIPT
+    ========================================== -->
+
+    <script
+        type="module"
+        src="../js/checkin.js"
+    ></script>
+
+</body>
+
+</html>
